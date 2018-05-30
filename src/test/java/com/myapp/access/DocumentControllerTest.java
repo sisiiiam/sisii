@@ -2,6 +2,7 @@ package com.myapp.access;
 
 import static org.hamcrest.Matchers.equalTo;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.jayway.restassured.RestAssured;
@@ -13,7 +14,7 @@ import com.jayway.restassured.http.ContentType;
  * @author Pradnya Talekar
  * @date 22 May 2018
  */
-
+@Ignore
 public class DocumentControllerTest {
 	@Test
 	public void shouldReturnDocumentID() {
