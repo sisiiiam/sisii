@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:camel="http://camel.apache.org/schema/spring"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans                    http://www.springframework.org/schema/beans/spring-beans.xsd                    http://camel.apache.org/schema/spring                     http://camel.apache.org/schema/spring/camel-spring.xsd">
+    
+    <!-- Rout builder -->
+    <camelContext id="camel" xmlns="http://camel.apache.org/schema/spring">
+        <camel:routeBuilder ref="restConsumerRouteBuilder"/>
+        <route id="_route1">
+            <from id="_from1" uri="file:c:/inbox?noop=true"/>
+            <to id="_to1" uri="file:c:/outbox?noop=true"/>
+        </route>
+    </camelContext>
+    
+</beans>
